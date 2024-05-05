@@ -2,13 +2,13 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import config from './configDetails'
 
 export default defineConfig({
   name: 'default',
   title: 'Portfolio-CMS',
 
-  projectId: 'evljjp3l',
-  dataset: 'production',
+  ...config,
 
   plugins: [structureTool(), visionTool()],
 
